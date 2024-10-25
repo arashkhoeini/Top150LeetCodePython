@@ -4,4 +4,6 @@ from .gas_station import Solution as GasStation
 from .candy import Solution as Candy
 from .min_sum_subarray_size import Solution as MinSumSubarraySize
 from .longest_substring_without_repeating_characters import Solution as LongestSubstringWithoutRepeat
-__all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'MinSumSubarraySize', 'LongestSubstringWithoutRepeat']
+from .valid_sudoku import Solution as ValidSudoku
+
+__all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku']
