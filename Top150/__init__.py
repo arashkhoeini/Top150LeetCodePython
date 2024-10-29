@@ -5,5 +5,8 @@ from .candy import Solution as Candy
 from .min_sum_subarray_size import Solution as MinSumSubarraySize
 from .longest_substring_without_repeating_characters import Solution as LongestSubstringWithoutRepeat
 from .valid_sudoku import Solution as ValidSudoku
+from .rotate_image import Solution as RotateImage
 
-__all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku']
+__all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
+           'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
+           'RotateImage']

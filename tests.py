@@ -1,5 +1,5 @@
 import unittest
-from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku
+from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 
 class TestSolutions(unittest.TestCase):
 
@@ -34,3 +34,13 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(ValidSudoku().isValidSudoku(board), True)
         board = [["8","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]
         self.assertEqual(ValidSudoku().isValidSudoku(board), False)
+
+    def test_rotate_image(self):
+        image = [[1,2,3],[4,5,6],[7,8,9]]
+        solution = [[7,4,1],[8,5,2],[9,6,3]]
+        RotateImage().rotate(image)
+        self.assertEqual(image, solution)
+        image = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+        solution = [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+        RotateImage().rotate(image)
+        self.assertEqual(image, solution)
