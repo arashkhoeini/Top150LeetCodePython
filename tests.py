@@ -1,5 +1,6 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
+from Top150 import GameOfLife
 
 class TestSolutions(unittest.TestCase):
 
@@ -44,3 +45,13 @@ class TestSolutions(unittest.TestCase):
         solution = [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
         RotateImage().rotate(image)
         self.assertEqual(image, solution)
+
+    def test_game_of_life(self):
+        board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+        solution = [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
+        GameOfLife().gameOfLife(board)
+        self.assertEqual(board, solution)
+        board = [[1,1],[1,0]]
+        solution = [[1,1],[1,1]]
+        GameOfLife().gameOfLife(board)
+        self.assertEqual(board, solution)
