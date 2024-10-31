@@ -7,7 +7,8 @@ from .longest_substring_without_repeating_characters import Solution as LongestS
 from .valid_sudoku import Solution as ValidSudoku
 from .rotate_image import Solution as RotateImage
 from .game_of_life import Solution as GameOfLife
+from .ransom_note import Solution as RansomNote
 
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
-           'RotateImage', 'GameOfLife']
+           'RotateImage', 'GameOfLife', 'RansomNote']

@@ -1,6 +1,6 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
-from Top150 import GameOfLife
+from Top150 import GameOfLife, RansomNote
 
 class TestSolutions(unittest.TestCase):
 
@@ -55,3 +55,8 @@ class TestSolutions(unittest.TestCase):
         solution = [[1,1],[1,1]]
         GameOfLife().gameOfLife(board)
         self.assertEqual(board, solution)
+    
+    def test_ransom_note(self):
+        self.assertEqual(RansomNote().canConstruct('a', 'b'), False)
+        self.assertEqual(RansomNote().canConstruct('aa', 'ab'), False)
+        self.assertEqual(RansomNote().canConstruct('aa', 'aab'), True)
