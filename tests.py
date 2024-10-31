@@ -1,6 +1,6 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
-from Top150 import GameOfLife, RansomNote, ValidAnagram
+from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams
 
 class TestSolutions(unittest.TestCase):
 
@@ -64,3 +64,8 @@ class TestSolutions(unittest.TestCase):
     def test_valid_anagram(self):
         self.assertTrue(ValidAnagram().isAnagram('anagram', 'nagaram'))
         self.assertFalse(ValidAnagram().isAnagram('rat', 'car'))
+    
+    def test_group_anagrams(self):
+        self.assertEqual(GroupAnagrams().groupAnagrams(["eat","tea","tan","ate","nat","bat"]), [["eat","tea","ate"],["tan","nat"],["bat"]])
+        self.assertEqual(GroupAnagrams().groupAnagrams([""]), [[""]])
+        self.assertEqual(GroupAnagrams().groupAnagrams(["a"]), [["a"]])

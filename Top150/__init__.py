@@ -9,7 +9,8 @@ from .rotate_image import Solution as RotateImage
 from .game_of_life import Solution as GameOfLife
 from .ransom_note import Solution as RansomNote
 from .valid_anagram import Solution as ValidAnagram
+from .group_anagrams import Solution as GroupAnagrams
 
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
-           'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram']
+           'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams']
