@@ -11,8 +11,9 @@ from .ransom_note import Solution as RansomNote
 from .valid_anagram import Solution as ValidAnagram
 from .group_anagrams import Solution as GroupAnagrams
 from .nearby_duplicates import Solution as NearbyDuplicates
+from .binary_tree_max_depth import Solution as BinaryTreeMaxDepth
 
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams'
-           'NearbyDuplicates']
+           'NearbyDuplicates', 'BinaryTreeMaxDepth']

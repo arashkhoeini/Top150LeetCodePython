@@ -1,7 +1,7 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
-from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates 
-
+from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth
+from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
     def test_jump_game_2(self):
@@ -74,3 +74,13 @@ class TestSolutions(unittest.TestCase):
         self.assertTrue(NearbyDuplicates().containsNearbyDuplicate([1,2,3,1], 3))
         self.assertTrue(NearbyDuplicates().containsNearbyDuplicate([1,0,1,1], 1))
         self.assertFalse(NearbyDuplicates().containsNearbyDuplicate([1,2,3,1,2,3], 2))
+
+    def test_binary_tree_max_depth(self):
+        
+        root = TreeNode(3)
+        root.left = TreeNode(9)
+        root.right = TreeNode(20)
+        root.right.left = TreeNode(15)
+        root.right.right = TreeNode(7)
+        self.assertEqual(BinaryTreeMaxDepth().maxDepth(root), 3)
+        self.assertEqual(BinaryTreeMaxDepth().maxDepth(None), 0)
