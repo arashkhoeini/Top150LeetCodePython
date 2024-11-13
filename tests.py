@@ -1,6 +1,6 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
-from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams
+from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates 
 
 class TestSolutions(unittest.TestCase):
 
@@ -69,3 +69,8 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(GroupAnagrams().groupAnagrams(["eat","tea","tan","ate","nat","bat"]), [["eat","tea","ate"],["tan","nat"],["bat"]])
         self.assertEqual(GroupAnagrams().groupAnagrams([""]), [[""]])
         self.assertEqual(GroupAnagrams().groupAnagrams(["a"]), [["a"]])
+    
+    def test_nearby_duplicates(self):
+        self.assertTrue(NearbyDuplicates().containsNearbyDuplicate([1,2,3,1], 3))
+        self.assertTrue(NearbyDuplicates().containsNearbyDuplicate([1,0,1,1], 1))
+        self.assertFalse(NearbyDuplicates().containsNearbyDuplicate([1,2,3,1,2,3], 2))
