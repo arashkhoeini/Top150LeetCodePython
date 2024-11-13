@@ -13,8 +13,9 @@ from .group_anagrams import Solution as GroupAnagrams
 from .nearby_duplicates import Solution as NearbyDuplicates
 from .binary_tree_max_depth import Solution as BinaryTreeMaxDepth
 from .binary_tree_invert import Solution as BinaryTreeInvert
+from .binary_tree_construction_preorder_inorder import Solution as BinaryTreeConstructionPreorderInorder
 
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams'
-           'NearbyDuplicates', 'BinaryTreeMaxDepth', 'BinaryTreeInvert']
+           'NearbyDuplicates', 'BinaryTreeMaxDepth', 'BinaryTreeInvert', 'BinaryTreeConstructionPreorderInorder']
