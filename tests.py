@@ -1,6 +1,7 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
+from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -101,3 +102,23 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(root.left.right.val, 6)
         self.assertEqual(root.right.left.val, 3)
         self.assertEqual(root.right.right.val, 1)
+
+    def test_binary_tree_construction_preorder_inorder(self):
+        preorder = [3,9,20,15,7]
+        inorder = [9,3,15,20,7]
+        root = BinaryTreeConstructionPreorderInorder().buildTree(preorder, inorder)
+        self.assertEqual(root.val, 3)
+        self.assertEqual(root.left.val, 9)
+        self.assertEqual(root.right.val, 20)
+        self.assertEqual(root.right.left.val, 15)
+        self.assertEqual(root.right.right.val, 7)
+
+    def test_binary_tree_construction_postorder_inorder(self):
+        postorder = [9,15,7,20,3]
+        inorder = [9,3,15,20,7]
+        root = BinaryTreeConstructionPostorderInorder().buildTree(inorder, postorder)
+        self.assertEqual(root.val, 3)
+        self.assertEqual(root.left.val, 9)
+        self.assertEqual(root.right.val, 20)
+        self.assertEqual(root.right.left.val, 15)
+        self.assertEqual(root.right.right.val, 7)
