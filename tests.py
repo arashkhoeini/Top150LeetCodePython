@@ -1,7 +1,7 @@
 import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
-from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten
+from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -137,3 +137,12 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(root.right.right.right.val, 4)
         self.assertEqual(root.right.right.right.right.val, 5)
         self.assertEqual(root.right.right.right.right.right.val, 6)
+
+    def test_binary_tree_count_nodes(self):
+        root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(5)
+        root.left.left = TreeNode(3)
+        root.left.right = TreeNode(4)
+        root.right.right = TreeNode(6)
+        self.assertEqual(CountBinaryTreeNodes().countNodes(root), 6)
