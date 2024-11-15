@@ -2,6 +2,7 @@ import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
+from Top150 import BSTMinimumAbsoluteDifference
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -146,3 +147,15 @@ class TestSolutions(unittest.TestCase):
         root.left.right = TreeNode(4)
         root.right.right = TreeNode(6)
         self.assertEqual(CountBinaryTreeNodes().countNodes(root), 6)
+
+    def test_bst_minimum_absolute_difference(self):
+        root = TreeNode(4)
+        root.left = TreeNode(2)
+        root.right = TreeNode(6)
+        root.left.left = TreeNode(1)
+        root.left.right = TreeNode(3)
+        self.assertEqual(BSTMinimumAbsoluteDifference().getMinimumDifference(root), 1)
+        root = TreeNode(1)
+        root.right = TreeNode(3)
+        root.right.left = TreeNode(2)
+        self.assertEqual(BSTMinimumAbsoluteDifference().getMinimumDifference(root), 1)
