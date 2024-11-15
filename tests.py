@@ -2,7 +2,7 @@ import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
-from Top150 import BSTMinimumAbsoluteDifference
+from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -159,3 +159,13 @@ class TestSolutions(unittest.TestCase):
         root.right = TreeNode(3)
         root.right.left = TreeNode(2)
         self.assertEqual(BSTMinimumAbsoluteDifference().getMinimumDifference(root), 1)
+
+    def test_bst_kth_smallest_element(self):
+        root = TreeNode(3)
+        root.left = TreeNode(1)
+        root.right = TreeNode(4)
+        root.left.right = TreeNode(2)
+        self.assertEqual(BSTKthSmallestElement().kthSmallest(root, 1), 1)
+        self.assertEqual(BSTKthSmallestElement().kthSmallest(root, 2), 2)
+        self.assertEqual(BSTKthSmallestElement().kthSmallest(root, 3), 3)
+        self.assertEqual(BSTKthSmallestElement().kthSmallest(root, 4), 4)
