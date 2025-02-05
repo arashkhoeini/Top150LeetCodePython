@@ -20,10 +20,11 @@ from .binary_tree_count_nodes import Solution as CountBinaryTreeNodes
 from .bst_minimum_absolute_difference import Solution as BSTMinimumAbsoluteDifference
 from .bst_kth_smallest_element import Solution as BSTKthSmallestElement
 from .bst_valid_tree import Solution as BSTValidTree
+from .simplify_path import Solution as SimplifyPath
 
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams',
            'NearbyDuplicates', 'BinaryTreeMaxDepth', 'BinaryTreeInvert', 'BinaryTreeConstructionPreorderInorder',
            'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 
-           'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree']
+           'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath']

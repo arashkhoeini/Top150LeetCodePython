@@ -2,7 +2,7 @@ import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
-from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree
+from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -187,3 +187,10 @@ class TestSolutions(unittest.TestCase):
         root.right.left = TreeNode(3)
         root.right.right = TreeNode(7)
         self.assertFalse(BSTValidTree().isValidBST(root))
+
+    def test_simplify_path(self):
+        self.assertEqual(SimplifyPath().simplifyPath("/home/"), "/home")
+        self.assertEqual(SimplifyPath().simplifyPath("/home//foo/"), "/home/foo")
+        self.assertEqual(SimplifyPath().simplifyPath("/home/user/Documents/../Pictures"), "/home/user/Pictures")
+        self.assertEqual(SimplifyPath().simplifyPath("/../"), "/")
+        self.assertEqual(SimplifyPath().simplifyPath("/.../a/../b/c/../d/./"), "/.../b/d")
