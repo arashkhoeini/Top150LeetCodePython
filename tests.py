@@ -2,7 +2,8 @@ import unittest
 from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarraySize, LongestSubstringWithoutRepeat, ValidSudoku, RotateImage
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
-from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath
+from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath, BinaryTreeRightSideView
+from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -194,3 +195,42 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(SimplifyPath().simplifyPath("/home/user/Documents/../Pictures"), "/home/user/Pictures")
         self.assertEqual(SimplifyPath().simplifyPath("/../"), "/")
         self.assertEqual(SimplifyPath().simplifyPath("/.../a/../b/c/../d/./"), "/.../b/d")
+
+    def test_binary_tree_right_side_view(self):
+        root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(3)
+        root.left.right = TreeNode(5)
+        root.right.right = TreeNode(4)
+        self.assertEqual(BinaryTreeRightSideView().rightSideView(root), [1,3,4])
+        root = TreeNode(1)
+        root.right = TreeNode(3)
+        self.assertEqual(BinaryTreeRightSideView().rightSideView(root), [1,3])
+        root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.left.left = TreeNode(4)
+        root.right = TreeNode(3)
+        root.right.right = TreeNode(5)
+        self.assertEqual(BinaryTreeRightSideView().rightSideView(root), [1,3,5])
+
+    def test_binary_tree_level_order_traversal(self):
+        root = TreeNode(3)
+        root.left = TreeNode(9)
+        root.right = TreeNode(20)
+        root.right.left = TreeNode(15)
+        root.right.right = TreeNode(7)
+        self.assertEqual(BinaryTreeLevelOrderTraversal().levelOrder(root), [[3],[9,20],[15,7]])
+        root = TreeNode(1)
+        root.left = TreeNode(2)
+        root.right = TreeNode(3)
+        root.left.left = TreeNode(4)
+        root.left.right = TreeNode(5)
+        root.right.left = TreeNode(6)
+        root.right.right = TreeNode(7)
+        self.assertEqual(BinaryTreeLevelOrderTraversal().levelOrder(root), [[1],[2,3],[4,5,6,7]])
+
+        def test_number_of_islands(self):
+            grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]
+            self.assertEqual(NumberOfIslands().numIslands(grid), 1)
+            grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]
+            self.assertEqual(NumberOfIslands().numIslands(grid), 3)

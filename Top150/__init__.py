@@ -21,10 +21,12 @@ from .bst_minimum_absolute_difference import Solution as BSTMinimumAbsoluteDiffe
 from .bst_kth_smallest_element import Solution as BSTKthSmallestElement
 from .bst_valid_tree import Solution as BSTValidTree
 from .simplify_path import Solution as SimplifyPath
-
+from .binary_tree_rightside_view import Solution as BinaryTreeRightSideView
+from .binary_tree_level_order_traversal import Solution as BinaryTreeLevelOrderTraversal
+from .number_of_islands import Solution as NumberOfIslands
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams',
            'NearbyDuplicates', 'BinaryTreeMaxDepth', 'BinaryTreeInvert', 'BinaryTreeConstructionPreorderInorder',
-           'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 
-           'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath']
+           'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 'NumberOfIslands',
+           'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath', 'BinaryTreeRightSideView', 'BinaryTreeLevelOrderTraversal']
