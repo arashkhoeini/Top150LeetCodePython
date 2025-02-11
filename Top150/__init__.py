@@ -23,10 +23,11 @@ from .bst_valid_tree import Solution as BSTValidTree
 from .simplify_path import Solution as SimplifyPath
 from .binary_tree_rightside_view import Solution as BinaryTreeRightSideView
 from .binary_tree_level_order_traversal import Solution as BinaryTreeLevelOrderTraversal
+from .convert_sorted_array_to_binary_search_tree import Solution as ConvertSortedArrayToBinarySearchTree
 from .number_of_islands import Solution as NumberOfIslands
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku',
-           'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams',
+           'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams', 'ConvertSortedArrayToBinarySearchTree',
            'NearbyDuplicates', 'BinaryTreeMaxDepth', 'BinaryTreeInvert', 'BinaryTreeConstructionPreorderInorder',
            'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 'NumberOfIslands',
            'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath', 'BinaryTreeRightSideView', 'BinaryTreeLevelOrderTraversal']

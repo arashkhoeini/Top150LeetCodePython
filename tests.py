@@ -3,7 +3,8 @@ from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarr
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
 from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath, BinaryTreeRightSideView
-from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands
+from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree
+
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
 
@@ -234,3 +235,13 @@ class TestSolutions(unittest.TestCase):
             self.assertEqual(NumberOfIslands().numIslands(grid), 1)
             grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]
             self.assertEqual(NumberOfIslands().numIslands(grid), 3)
+
+    def test_convert_sorted_array_to_binary_search_tree(self):
+        nums = [-10,-3,0,5,9]
+        root = ConvertSortedArrayToBinarySearchTree().sortedArrayToBST(nums)
+        self.assertEqual(root.val, 0)
+        self.assertEqual(root.left.val, -3)
+        self.assertEqual(root.left.left.val, -10)
+        self.assertEqual(root.right.val, 9)
+        self.assertEqual(root.right.left.val, 5)
+        
