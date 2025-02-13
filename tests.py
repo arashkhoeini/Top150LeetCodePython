@@ -3,7 +3,7 @@ from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarr
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
 from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath, BinaryTreeRightSideView
-from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree
+from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree, SnakesAndLadders
 
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
@@ -244,4 +244,18 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(root.left.left.val, -10)
         self.assertEqual(root.right.val, 9)
         self.assertEqual(root.right.left.val, 5)
+
+    def test_snakes_and_ladders(self):
+        board = [[-1,-1,-1,-1,-1,-1],
+                 [-1,-1,-1,-1,-1,-1],
+                 [-1,-1,-1,-1,-1,-1],
+                 [-1,35,-1,-1,13,-1],
+                 [-1,-1,-1,-1,-1,-1],
+                 [-1,15,-1,-1,-1,-1]]
+        self.assertEqual(SnakesAndLadders().snakesAndLadders(board), 4)
+        board = [[-1,-1,-1],
+                 [-1,9,8],
+                 [-1,8,9]]
+        self.assertEqual(SnakesAndLadders().snakesAndLadders(board), 1)
+        
         
