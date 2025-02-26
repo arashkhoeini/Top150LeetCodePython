@@ -3,7 +3,9 @@ from Top150 import JumpGame2, ProductExceptSelf, GasStation, Candy, MinSumSubarr
 from Top150 import GameOfLife, RansomNote, ValidAnagram, GroupAnagrams, NearbyDuplicates, BinaryTreeMaxDepth, BinaryTreeInvert
 from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstructionPostorderInorder, BinaryTreeFlatten, CountBinaryTreeNodes
 from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath, BinaryTreeRightSideView
-from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree, SnakesAndLadders
+from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree, SnakesAndLadders, MinimumGeneticMutation
+from Top150 import WordLadder, RemoveNthNodeFromEnd, ListNode, RotateList, Search2DMatrix, ContainerWithMostWater, TwoSum2, ThreeSum, IsSubsequence
+from Top150 import LongestConsecutiveSequence
 
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
@@ -257,5 +259,98 @@ class TestSolutions(unittest.TestCase):
                  [-1,9,8],
                  [-1,8,9]]
         self.assertEqual(SnakesAndLadders().snakesAndLadders(board), 1)
-        
-        
+
+    def test_minimum_genetic_mutation(self):
+        self.assertEqual(MinimumGeneticMutation().minMutation("AACCGGTT", "AACCGGTA", ["AACCGGTA"]), 1)
+        self.assertEqual(MinimumGeneticMutation().minMutation("AACCGGTT", "AAACGGTA", ["AACCGGTA", "AACCGCTA", "AAACGGTA"]), 2)
+        self.assertEqual(MinimumGeneticMutation().minMutation("AAAAACCC", "AACCCCCC", ["AAAACCCC", "AAACCCCC", "AACCCCCC"]), 3)
+
+    def test_word_ladder(self):
+        self.assertEqual(WordLadder().ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"]), 5)
+        self.assertEqual(WordLadder().ladderLength("hit", "cog", ["hot","dot","dog","lot","log"]), 0)
+        self.assertEqual(WordLadder().ladderLength("hot", "dog", ["hot","dog"]), 0)
+        self.assertEqual(WordLadder().ladderLength("hot", "dog", ["hot","dog","dot"]), 3)
+    
+    def test_remove_nth_node_from_end(self):
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next.next = ListNode(3)
+        head.next.next.next = ListNode(4)
+        head.next.next.next.next = ListNode(5)
+        head = RemoveNthNodeFromEnd().removeNthFromEnd(head, 2)
+        self.assertEqual(head.val, 1)
+        self.assertEqual(head.next.val, 2)
+        self.assertEqual(head.next.next.val, 3)
+        self.assertEqual(head.next.next.next.val, 5)
+        head = ListNode(1)
+        head = RemoveNthNodeFromEnd().removeNthFromEnd(head, 1)
+        self.assertEqual(head, None)
+
+    def test_remove_nth_node_from_end(self):
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next.next = ListNode(3)
+        head.next.next.next = ListNode(4)
+        head.next.next.next.next = ListNode(5)
+        head = RemoveNthNodeFromEnd().removeNthFromEnd(head, 2)
+        self.assertEqual(head.val, 1)
+        self.assertEqual(head.next.val, 2)
+        self.assertEqual(head.next.next.val, 3)
+        self.assertEqual(head.next.next.next.val, 5)
+        head = ListNode(1)
+        head = RemoveNthNodeFromEnd().removeNthFromEnd(head, 1)
+        self.assertEqual(head, None)
+    
+    def test_rotate_list(self):
+        head = ListNode(1)
+        head.next = ListNode(2)
+        head.next.next = ListNode(3)
+        head.next.next.next = ListNode(4)
+        head.next.next.next.next = ListNode(5)
+        head = RotateList().rotateRight(head, 2)
+        self.assertEqual(head.val, 4)
+        self.assertEqual(head.next.val, 5)
+        self.assertEqual(head.next.next.val, 1)
+        self.assertEqual(head.next.next.next.val, 2)
+        self.assertEqual(head.next.next.next.next.val, 3)
+        head = ListNode(0)
+        head.next = ListNode(1)
+        head.next.next = ListNode(2)
+        head = RotateList().rotateRight(head, 4)
+        self.assertEqual(head.val, 2)
+        self.assertEqual(head.next.val, 0)
+        self.assertEqual(head.next.next.val, 1)
+
+    def test_search_2d_matrix(self):
+        matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
+        self.assertTrue(Search2DMatrix().searchMatrix(matrix, 3))
+        self.assertFalse(Search2DMatrix().searchMatrix(matrix, 13))
+        matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]]
+        self.assertTrue(Search2DMatrix().searchMatrix(matrix, 3))
+        self.assertFalse(Search2DMatrix().searchMatrix(matrix, 13))
+    
+    def test_container_with_most_water(self):
+        self.assertEqual(ContainerWithMostWater().maxArea([1,8,6,2,5,4,8,3,7]), 49)
+        self.assertEqual(ContainerWithMostWater().maxArea([1,1]), 1)
+        self.assertEqual(ContainerWithMostWater().maxArea([4,3,2,1,4]), 16)
+        self.assertEqual(ContainerWithMostWater().maxArea([1,2,1]), 2)
+    
+    def test_two_sum_2(self):
+        self.assertEqual(TwoSum2().twoSum([2,7,11,15], 9), [1,2])
+        self.assertEqual(TwoSum2().twoSum([2,3,4], 6), [1,3])
+        self.assertEqual(TwoSum2().twoSum([-1,0], -1), [1,2])
+    
+    def test_three_sum(self):
+        self.assertEqual(ThreeSum().threeSum([-1,0,1,2,-1,-4]), [(-1,0,1), (-1,-1,2)])
+        self.assertEqual(ThreeSum().threeSum([]), [])
+        self.assertEqual(ThreeSum().threeSum([0]), [])
+        self.assertEqual(ThreeSum().threeSum([0,0,0,0]), [(0,0,0)])
+
+    def test_is_subsequence(self):
+        self.assertTrue(IsSubsequence().isSubsequence("abc", "ahbgdc"))
+        self.assertFalse(IsSubsequence().isSubsequence("axc", "ahbgdc"))
+
+    def test_longest_consecutive_sequence(self):
+        self.assertEqual(LongestConsecutiveSequence().longestConsecutive([100,4,200,1,3,2]), 4)
+        self.assertEqual(LongestConsecutiveSequence().longestConsecutive([0,3,7,2,5,8,4,6,0,1]), 9)
+        self.assertEqual(LongestConsecutiveSequence().longestConsecutive([0,3,7,2,5,8,4,6,0,1,9]), 10)
