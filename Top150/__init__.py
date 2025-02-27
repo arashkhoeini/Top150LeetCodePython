@@ -38,6 +38,9 @@ from .two_sum_2 import Solution as TwoSum2
 from .three_sum import Solution as ThreeSum
 from .is_subsequence import Solution as IsSubsequence
 from .longest_consecutive_sequence import Solution as LongestConsecutiveSequence
+from .word_break import Solution as WordBreak
+from .coin_change import Solution as CoinChange
+from .house_robber import Solution as HouseRobber
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'SnakesAndLadders', 'WordLadder', 'RemoveNthNodeFromEnd',
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku', 'MinimumGeneticMutation', 'ListNode',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams', 'ConvertSortedArrayToBinarySearchTree',
@@ -45,4 +48,4 @@ __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'SnakesAndLa
            'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 'NumberOfIslands',
            'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath', 'BinaryTreeRightSideView', 'BinaryTreeLevelOrderTraversal',
            'RemoveNthNodeFromEnd', 'RotateList', 'Search2DMatrix', 'ContainerWithMostWater', 'TwoSum2', 'ThreeSum', 'IsSubsequence',
-           'LongestConsecutiveSequence']
+           'LongestConsecutiveSequence', 'WordBreak', 'CoinChange', 'HouseRobber']
