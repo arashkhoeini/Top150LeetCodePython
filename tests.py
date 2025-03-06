@@ -5,7 +5,7 @@ from Top150 import BinaryTreeConstructionPreorderInorder, BinaryTreeConstruction
 from Top150 import BSTMinimumAbsoluteDifference, BSTKthSmallestElement, BSTValidTree, SimplifyPath, BinaryTreeRightSideView
 from Top150 import BinaryTreeLevelOrderTraversal, NumberOfIslands, ConvertSortedArrayToBinarySearchTree, SnakesAndLadders, MinimumGeneticMutation
 from Top150 import WordLadder, RemoveNthNodeFromEnd, ListNode, RotateList, Search2DMatrix, ContainerWithMostWater, TwoSum2, ThreeSum, IsSubsequence
-from Top150 import LongestConsecutiveSequence
+from Top150 import LongestConsecutiveSequence, WordBreak, CoinChange, HouseRobber, CourseSchedule, KthLargestElementInArray
 
 from Top150.binary_tree_max_depth import TreeNode
 class TestSolutions(unittest.TestCase):
@@ -354,3 +354,28 @@ class TestSolutions(unittest.TestCase):
         self.assertEqual(LongestConsecutiveSequence().longestConsecutive([100,4,200,1,3,2]), 4)
         self.assertEqual(LongestConsecutiveSequence().longestConsecutive([0,3,7,2,5,8,4,6,0,1]), 9)
         self.assertEqual(LongestConsecutiveSequence().longestConsecutive([0,3,7,2,5,8,4,6,0,1,9]), 10)
+
+    def test_word_break(self):
+        self.assertTrue(WordBreak().wordBreak("leetcode", ["leet", "code"]))
+        self.assertTrue(WordBreak().wordBreak("applepenapple", ["apple", "pen"]))
+        self.assertFalse(WordBreak().wordBreak("catsandog", ["cats", "dog", "sand", "and", "cat"]))
+
+    def test_coin_change(self):
+        self.assertEqual(CoinChange().coinChange([1,2,5], 11), 3)
+        self.assertEqual(CoinChange().coinChange([2], 3), -1)
+        self.assertEqual(CoinChange().coinChange([1], 0), 0)
+        self.assertEqual(CoinChange().coinChange([1], 1), 1)
+        self.assertEqual(CoinChange().coinChange([1], 2), 2)
+
+    def test_house_robber(self):
+        self.assertEqual(HouseRobber().rob([1,2,3,1]), 4)
+        self.assertEqual(HouseRobber().rob([2,7,9,3,1]), 12)
+
+    def test_course_schedule(self):
+        self.assertTrue(CourseSchedule().canFinish(2, [[1,0]]))
+        self.assertFalse(CourseSchedule().canFinish(2, [[1,0],[0,1]]))
+        self.assertFalse(CourseSchedule().canFinish(3, [[1,0],[1,2],[0,1]]))
+
+    def test_kth_largest_element_in_array(self):
+        self.assertEqual(KthLargestElementInArray().findKthLargest([3,2,1,5,6,4], 2), 5)
+        self.assertEqual(KthLargestElementInArray().findKthLargest([3,2,3,1,2,4,5,5,6], 4), 4)

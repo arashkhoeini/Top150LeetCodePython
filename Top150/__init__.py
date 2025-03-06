@@ -41,6 +41,8 @@ from .longest_consecutive_sequence import Solution as LongestConsecutiveSequence
 from .word_break import Solution as WordBreak
 from .coin_change import Solution as CoinChange
 from .house_robber import Solution as HouseRobber
+from .course_schedule import Solution as CourseSchedule
+from .kth_largest_element_in_array import Solution as KthLargestElementInArray
 __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'SnakesAndLadders', 'WordLadder', 'RemoveNthNodeFromEnd',
            'MinSumSubarraySize', 'LongestSubstringWithoutRepeat', 'ValidSudoku', 'MinimumGeneticMutation', 'ListNode',
            'RotateImage', 'GameOfLife', 'RansomNote', 'ValidAnagram', 'GroupAnagrams', 'ConvertSortedArrayToBinarySearchTree',
@@ -48,4 +50,4 @@ __all__ = ['JumpGame2', 'ProductExceptSelf', 'GasStation', 'Candy', 'SnakesAndLa
            'BinaryTreeConstructionPostorderInorder', 'BinaryTreeFlatten' , 'CountBinaryTreeNodes', 'NumberOfIslands',
            'BSTMinimumAbsoluteDifference', 'BSTKthSmallestElement', 'BSTValidTree', 'SimplifyPath', 'BinaryTreeRightSideView', 'BinaryTreeLevelOrderTraversal',
            'RemoveNthNodeFromEnd', 'RotateList', 'Search2DMatrix', 'ContainerWithMostWater', 'TwoSum2', 'ThreeSum', 'IsSubsequence',
-           'LongestConsecutiveSequence', 'WordBreak', 'CoinChange', 'HouseRobber']
+           'LongestConsecutiveSequence', 'WordBreak', 'CoinChange', 'HouseRobber', 'CourseSchedule', 'KthLargestElementInArray']
